@@ -34,7 +34,7 @@ class BasicNeuralNet:
         self.z1 = np.dot(example, self.weights1) + self.bias1
         self.a1 = relu(self.z1)
         self.z2 = np.dot(self.a1, self.weights2) + self.bias2
-        return sigmoid(self.z2), self.entropy_loss(label, sigmoid(self.z2))
+        return sigmoid(self.z2)
 
     def back(self, examples, y, y_dash):
         print("TO DO")

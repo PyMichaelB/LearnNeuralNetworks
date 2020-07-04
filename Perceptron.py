@@ -20,9 +20,6 @@ class Perceptron:
                     self.weights[idx + 1] += self.lr * (label - prediction) * example[idx]
                 self.weights[0] += self.lr * (label - prediction)
 
-    def plot_predict(self, x1, y1):
-        return self.predict([x1, y1])
-
 
 if __name__ == "__main__":
     df = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data', header=None)
